@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/RestWebService/Service Descriptors/restwebservice.Resource-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.org/Employees"
+}]}

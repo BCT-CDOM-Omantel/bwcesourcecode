@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmpDetails"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response" : {
+      "type" : "object",
+      "required" : [ "EmpStatus", "EmpLevel", "EmpID", "EmpName" ],
+      "properties" : {
+        "EmpID" : {
+          "type" : "string"
+        },
+        "EmpName" : {
+          "type" : "string"
+        },
+        "EmpStatus" : {
+          "type" : "string"
+        },
+        "EmpLevel" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpDetails" : {
+      "type" : "object",
+      "required" : [ "Salary", "EmpPincode", "EmpID", "EmpName", "EmpAddress" ],
+      "properties" : {
+        "EmpID" : {
+          "type" : "integer"
+        },
+        "EmpName" : {
+          "type" : "string"
+        },
+        "EmpAddress" : {
+          "type" : "string"
+        },
+        "EmpPincode" : {
+          "type" : "string"
+        },
+        "Salary" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}
